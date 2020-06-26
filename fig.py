@@ -7,7 +7,7 @@ def application(environ, start_response) :
     mul = 0
     x = d.get('x',[''])[0]
     y = d.get('y',[''])[0]
-    if '' not in [x,y] :
+    if x.isdigit() and y.isdigit() :
 	x,y = int(x), int(y)
 	sum = [x+y]
 	mul = [x*y]
